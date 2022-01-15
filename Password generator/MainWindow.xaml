@@ -15,6 +15,15 @@
         <Rectangle Width="400" Fill="#03071e"  ></Rectangle>
         <Rectangle Width="400" Fill="#9D0208"  Grid.Column="1"></Rectangle>
         <TextBlock></TextBlock>
+        <Button Grid.Column="0" Width="250" Height="320" >
+            <Button.BorderBrush>
+                <SolidColorBrush>
+                </SolidColorBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="pictures/app/red_lock.png" Stretch="UniformToFill"></ImageBrush>
+            </Button.Background>
+        </Button>
         <Button Grid.Column="1" Width="250" Height="320" >
             <Button.Background>
                 <ImageBrush ImageSource="pictures/app/blue_lock.png" Stretch="UniformToFill"></ImageBrush>
