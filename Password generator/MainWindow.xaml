@@ -15,7 +15,7 @@
         <Rectangle Fill="#03071e"  Name="Bluerectangle" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,253.6,0" MouseEnter="mouseEnterBlue"/>
         <Rectangle Width="400" Fill="#9D0208"  Name="RedRectangle" Grid.Column="1" HorizontalAlignment="Right" MouseEnter="RedMouseEnter"  Margin="0,0,-3.4,0"></Rectangle>
 
-        <Button Grid.Column="0" Width="250" Height="320" Name="red_lock" MouseEnter="RedLockHoverOn"  >
+        <Button Grid.Column="0" Width="250" Height="320" Name="red_lock"  >
             <Button.BorderBrush>
                 <SolidColorBrush>
                 </SolidColorBrush>
@@ -24,6 +24,7 @@
             <Button.Background>
                 <ImageBrush ImageSource="pictures/app/red_lock.png" Stretch="UniformToFill"></ImageBrush>
             </Button.Background>
+            
         </Button>
         <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock" MouseEnter="BlueLockHoverOn" MouseLeave="BlueLockHoverOff" >
             <Button.Background>
