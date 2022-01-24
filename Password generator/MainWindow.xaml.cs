@@ -26,11 +26,7 @@ namespace Password_generator
         }
 
         #region rectangles
-        private void mouseEnterBlue(object sender, MouseEventArgs e)
-        {
-            Bluerectangle.Width = 200;
-            
-        }
+        
 
         private void RedMouseEnter(object sender, MouseEventArgs e)
         {
@@ -52,17 +48,7 @@ namespace Password_generator
             blue_lock.Height = 320;
         }
 
-        private void RedLockHoverOn(object sender, MouseEventArgs e)
-        {
-            red_lock.Width = 275;
-            red_lock.Height = 352;
-        }
-
-        private void RedLockHoverOff(object sender, MouseEventArgs e)
-        {
-            red_lock.Width = 250;
-            red_lock.Height = 320;
-        }
+        
         #endregion
 
 
