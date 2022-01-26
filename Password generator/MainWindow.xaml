@@ -8,13 +8,10 @@
         mc:Ignorable="d"
         Title="Password Generator" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400*"/>
-            <ColumnDefinition Width="400*"/>
-        </Grid.ColumnDefinitions>
+        
 
 
-        <Rectangle Fill="#03071e"  Name="Bluerectangle" Grid.Column="0" Grid.ColumnSpan="2"  Width="400" HorizontalAlignment="Left"  >
+        <Rectangle Fill="#03071e"  Name="Bluerectangle"    Width="400" HorizontalAlignment="Left"  Panel.ZIndex="0">
            
             <Rectangle.Triggers>
                 
@@ -48,8 +45,8 @@
 
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="430" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="370" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
                             
                         </Storyboard>
                     </BeginStoryboard>
@@ -68,7 +65,7 @@
                 
         </Rectangle>
 
-        <Button Grid.Column="0" Width="250" Height="320" Name="red_lock"  >
+        <Button Grid.Column="0" Width="250" Height="320" Name="red_lock" Margin="0,0,400,0" Panel.ZIndex="10"  >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -124,7 +121,7 @@
             </Button.Background>
             
         </Button>
-        <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock"   >
+        <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock" Margin="400,0,0,0" Panel.ZIndex="10"  >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -145,8 +142,8 @@
                                 
 
                             </DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="370" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="430" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
