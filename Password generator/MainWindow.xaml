@@ -14,12 +14,17 @@
         </Grid.ColumnDefinitions>
 
 
-        <Rectangle Fill="#03071e"  Name="Bluerectangle" Grid.Column="0" Grid.ColumnSpan="2"  Width="400" HorizontalAlignment="Left"> 
+        <Rectangle Fill="#03071e"  Name="Bluerectangle" Grid.Column="0" Grid.ColumnSpan="2"  Width="400" HorizontalAlignment="Left"  >
+           
             <Rectangle.Triggers>
+                
+                   
                 <EventTrigger RoutedEvent="MouseEnter" >
+                    
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2" From="350" To="400" Storyboard.TargetProperty="Width">
+                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width">
                             </DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
@@ -27,9 +32,8 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2" From="400" To="350" Storyboard.TargetProperty="Width"> 
-                                
-                            </DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                     
@@ -38,7 +42,31 @@
                 
             </Rectangle.Triggers>
         </Rectangle>
-            <Rectangle Width="400" Fill="#9D0208"  Name="RedRectangle" Grid.Column="1" HorizontalAlignment="Right" MouseEnter="RedMouseEnter"  Margin="0,0,-3.4,0"></Rectangle>
+            <Rectangle Width="400" Fill="#9D0208"  Name="RedRectangle" Grid.Column="1" HorizontalAlignment="Right"   >
+            <Rectangle.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter" >
+
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+
+                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                </EventTrigger>
+            </Rectangle.Triggers>
+                
+        </Rectangle>
 
         <Button Grid.Column="0" Width="250" Height="320" Name="red_lock"  >
             <Button.Template>
@@ -50,16 +78,16 @@
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="250" To="275" Storyboard.TargetProperty="Width">
-                                
-                            </DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:0.5"  To="275" Storyboard.TargetProperty="Width" ></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="320" To="352" Storyboard.TargetProperty="Height">
+                            <DoubleAnimation Duration="0:0:0.5"  To="352" Storyboard.TargetProperty="Height">
 
                             </DoubleAnimation>
                         </Storyboard>
@@ -69,7 +97,7 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="275" To="250" Storyboard.TargetProperty="Width">
+                            <DoubleAnimation Duration="0:0:0.5"  To="250" Storyboard.TargetProperty="Width">
 
                             </DoubleAnimation>
                         </Storyboard>
@@ -79,7 +107,7 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="352" To="320" Storyboard.TargetProperty="Height">
+                            <DoubleAnimation Duration="0:0:0.5"  To="320" Storyboard.TargetProperty="Height">
 
                             </DoubleAnimation>
                         </Storyboard>
@@ -96,7 +124,7 @@
             </Button.Background>
             
         </Button>
-        <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock" MouseEnter="BlueLockHoverOn" MouseLeave="BlueLockHoverOff" >
+        <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock"   >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -113,16 +141,19 @@
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="250" To="275" Storyboard.TargetProperty="Width">
+                            <DoubleAnimation Duration="0:0:0.5"  To="275" Storyboard.TargetProperty="Width">
+                                
 
                             </DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="320" To="352" Storyboard.TargetProperty="Height">
+                            <DoubleAnimation Duration="0:0:0.5"  To="352" Storyboard.TargetProperty="Height">
 
                             </DoubleAnimation>
                         </Storyboard>
@@ -131,9 +162,10 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="275" To="250" Storyboard.TargetProperty="Width">
+                            <DoubleAnimation Duration="0:0:0.5"  To="250" Storyboard.TargetProperty="Width">
 
                             </DoubleAnimation>
+                            
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -141,7 +173,7 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.5" From="352" To="320" Storyboard.TargetProperty="Height">
+                            <DoubleAnimation Duration="0:0:0.5"  To="320" Storyboard.TargetProperty="Height">
 
                             </DoubleAnimation>
                         </Storyboard>

@@ -25,32 +25,7 @@ namespace Password_generator
             InitializeComponent();
         }
 
-        #region rectangles
         
-
-        private void RedMouseEnter(object sender, MouseEventArgs e)
-        {
-            RedRectangle.Width = 200;
-
-        }
-        #endregion
-
-        #region buttons with lock on them
-        private void BlueLockHoverOn(object sender, MouseEventArgs e)
-        {
-            blue_lock.Width = 275;
-            blue_lock.Height = 352;
-        }
-
-        private void BlueLockHoverOff(object sender, MouseEventArgs e)
-        {
-            blue_lock.Width = 250;
-            blue_lock.Height = 320;
-        }
-
-        
-        #endregion
-
 
     }
 }
