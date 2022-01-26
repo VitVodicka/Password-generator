@@ -41,6 +41,11 @@
             <Rectangle Width="400" Fill="#9D0208"  Name="RedRectangle" Grid.Column="1" HorizontalAlignment="Right" MouseEnter="RedMouseEnter"  Margin="0,0,-3.4,0"></Rectangle>
 
         <Button Grid.Column="0" Width="250" Height="320" Name="red_lock"  >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
+                </ControlTemplate>
+            </Button.Template>
             <Button.Triggers>
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
@@ -92,6 +97,11 @@
             
         </Button>
         <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock" MouseEnter="BlueLockHoverOn" MouseLeave="BlueLockHoverOff" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
+                </ControlTemplate>
+            </Button.Template>
             <Button.Background>
                 <ImageBrush ImageSource="pictures/app/blue_lock.png" Stretch="UniformToFill"></ImageBrush>
             </Button.Background>
@@ -99,6 +109,45 @@
                 <SolidColorBrush>
                 </SolidColorBrush>
             </Button.BorderBrush>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.5" From="250" To="275" Storyboard.TargetProperty="Width">
+
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.5" From="320" To="352" Storyboard.TargetProperty="Height">
+
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.5" From="275" To="250" Storyboard.TargetProperty="Width">
+
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.5" From="352" To="320" Storyboard.TargetProperty="Height">
+
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
         </Button>
 
 
