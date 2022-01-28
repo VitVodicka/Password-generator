@@ -20,8 +20,8 @@
                     
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width">
+                            <DoubleAnimation Duration="0:0:1"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="450" Storyboard.TargetProperty="Width">
                             </DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
@@ -29,8 +29,8 @@
                 <EventTrigger RoutedEvent="MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="400" Storyboard.TargetProperty="Width"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                     
@@ -45,8 +45,8 @@
 
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2"  To="430" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="370" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="430" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="370" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
                             
                         </Storyboard>
                     </BeginStoryboard>
@@ -55,8 +55,8 @@
                     <BeginStoryboard>
                         <Storyboard>
 
-                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="400" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
 
@@ -75,8 +75,8 @@
                 <EventTrigger RoutedEvent="MouseEnter">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Duration="0:0:2"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="450" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="350" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                             <DoubleAnimation Duration="0:0:0.5"  To="275" Storyboard.TargetProperty="Width" ></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
@@ -142,8 +142,8 @@
                                 
 
                             </DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="370" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
-                            <DoubleAnimation Duration="0:0:2"  To="430" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="370" Storyboard.TargetProperty="Width" Storyboard.TargetName="Bluerectangle"></DoubleAnimation>
+                            <DoubleAnimation Duration="0:0:1"  To="430" Storyboard.TargetProperty="Width" Storyboard.TargetName="RedRectangle"></DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
