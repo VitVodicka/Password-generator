@@ -29,7 +29,26 @@ namespace Password_generator
         public void Set()
         {
             Random r = new Random();
-            GeneratedPassword = r.Next().ToString();
+            int[] array = new int[11];
+            char BigNumber;
+            int BigNumberPosition;
+            
+            //velké čísla
+            for(int i = 0; i < r.Next(1,5);i++)
+            {
+                BigNumber = (char)r.Next(65,91);
+                BigNumberPosition = r.Next(0,13);
+
+                while (array[BigNumberPosition]!=null)
+                {
+                    
+                    BigNumberPosition = r.Next(0, 13);
+                }
+                
+                array[BigNumberPosition] = BigNumber;
+                
+
+            }
             Change("GeneratedPassword");
         }
         
