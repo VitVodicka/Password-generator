@@ -20,13 +20,17 @@ namespace Password_generator
     /// </summary>
     public partial class password_generator : Page
     {
+        Passwordgeneration ps = new Passwordgeneration();
         public password_generator()
         {
             InitializeComponent();
+            DataContext = ps;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ps.Set();
+            
 
         }
     }
