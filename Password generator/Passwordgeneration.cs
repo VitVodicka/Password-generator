@@ -9,10 +9,10 @@ namespace Password_generator
 {
     class Passwordgeneration:INotifyPropertyChanged
     {
-        public string GeneratedPassword { get; set; }
+        public string input { get; set; }
         public Passwordgeneration()
         {
-            
+            Set();
         }
         #region Inotify
         public event PropertyChangedEventHandler PropertyChanged;
@@ -28,30 +28,111 @@ namespace Password_generator
 
         public void Set()
         {
+            #region init
             Random r = new Random();
-            int[] array = new int[11];
-            char BigNumber;
-            int BigNumberPosition;
-            
-            //velké čísla
-            for(int i = 0; i < r.Next(1,5);i++)
+            string[] pole = new string[12];
+            List<int> position = new List<int>(new int[12]);
+            char BigLetter;
+            int Position;
+            char SmallLetter;
+            char character;
+            char number;
+            bool k;
+            #endregion
+            #region Big letters
+            for (int i = 0; i < 3; i++)
             {
-                BigNumber = (char)r.Next(65,91);
-                BigNumberPosition = r.Next(0,13);
-
-                while (array[BigNumberPosition]!=null)
+                BigLetter = (char)r.Next(65, 90);
+                k = true;
+                while (k)
                 {
-                    
-                    BigNumberPosition = r.Next(0, 13);
+                    Position = r.Next(0, 12);
+                    if (position.Contains(Position) == false)
+                    {
+                        position.Add(Position);
+                        pole[Position] = BigLetter.ToString();
+                        k = false;
+                    }
+
                 }
-                
-                array[BigNumberPosition] = BigNumber;
-                
+
+
+
 
             }
-            Change("GeneratedPassword");
+            #endregion
+            #region small letters
+
+            for (int i = 0; i < 3; i++)
+            {
+                SmallLetter = (char)r.Next(97, 122);
+                k = true;
+                while (k)
+                {
+                    Position = r.Next(0, 12);
+                    if (position.Contains(Position) == false)
+                    {
+                        position.Add(Position);
+                        pole[Position] = SmallLetter.ToString();
+                        k = false;
+                    }
+
+                }
+
+
+
+
+            }
+            #endregion
+            #region character
+            for (int i = 0; i < 3; i++)
+            {
+                character = (char)r.Next(58, 64);
+                k = true;
+                while (k)
+                {
+                    Position = r.Next(0, 12);
+                    if (position.Contains(Position) == false)
+                    {
+                        position.Add(Position);
+                        pole[Position] = character.ToString();
+
+                        k = false;
+                    }
+
+
+                }
+
+            }
+            #endregion
+            #region number
+
+            for (int i = 0; i < 2; i++)
+            {
+                number = (char)r.Next(48, 57);
+                k = true;
+                while (k)
+                {
+                    Position = r.Next(0, 12);
+                    if ((position.Contains(Position) == false))
+                    {
+                        position.Add(Position);
+                        pole[Position] = number.ToString();
+                        k = false;
+                    }
+
+
+
+                }
+
+            }
+            #endregion
+            input = string.Join("", pole);
+            Change("input");
+        }
+            
         }
         
         
     }
-}
+
