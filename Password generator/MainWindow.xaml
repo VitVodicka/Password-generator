@@ -65,7 +65,7 @@
                 
         </Rectangle>
 
-        <Button Grid.Column="0" Width="250" Height="320" Name="red_lock" Margin="0,0,400,0" Panel.ZIndex="10"  >
+        <Button Grid.Column="0" Width="250" Height="320" Name="red_lock" Margin="0,0,400,0" Panel.ZIndex="10" Click="red_lock_Click"  >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>
@@ -121,7 +121,7 @@
             </Button.Background>
             
         </Button>
-        <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock" Margin="400,0,0,0" Panel.ZIndex="10"  >
+        <Button Grid.Column="1" Width="250" Height="320" Name="blue_lock" Margin="400,0,0,0" Panel.ZIndex="10" Click="blue_lock_Click"  >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}"></Border>

@@ -25,7 +25,18 @@ namespace Password_generator
             InitializeComponent();
         }
 
-        
+        private void red_lock_Click(object sender, RoutedEventArgs e)
+        {
+            PasswordInput r = new PasswordInput();
+            r.Show();
+           
+                                    
+        }
 
+        private void blue_lock_Click(object sender, RoutedEventArgs e)
+        {
+            PasswordGenerator p = new PasswordGenerator();
+            p.Show();
+        }
     }
 }

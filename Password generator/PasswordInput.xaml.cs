@@ -10,19 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Password_generator
 {
     /// <summary>
-    /// Interakční logika pro password_input.xaml
+    /// Interakční logika pro PasswordInput.xaml
     /// </summary>
-    public partial class password_input : Page
+    public partial class PasswordInput : Window
     {
-        public password_input()
+        Passwordgeneration ps = new Passwordgeneration();
+        public PasswordInput()
         {
             InitializeComponent();
+            DataContext = ps;
         }
     }
 }

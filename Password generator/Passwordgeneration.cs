@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Password_generator
@@ -10,9 +12,11 @@ namespace Password_generator
     class Passwordgeneration:INotifyPropertyChanged
     {
         public string input { get; set; }
+        public string pass_input { get; set; }
         public Passwordgeneration()
         {
             Set();
+            
         }
         #region Inotify
         public event PropertyChangedEventHandler PropertyChanged;

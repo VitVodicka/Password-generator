@@ -10,18 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Password_generator
 {
     /// <summary>
-    /// Interakční logika pro password_generator.xaml
+    /// Interakční logika pro PasswordGenerator.xaml
     /// </summary>
-    public partial class password_generator : Page
+    public partial class PasswordGenerator : Window
     {
         Passwordgeneration ps = new Passwordgeneration();
-        public password_generator()
+        public PasswordGenerator()
         {
             InitializeComponent();
             DataContext = ps;
@@ -30,8 +29,6 @@ namespace Password_generator
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ps.Set();
-            
-
         }
     }
 }
