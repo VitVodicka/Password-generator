@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -136,24 +137,28 @@ namespace Password_generator
         }
         public string PassInput(string s)
         {
+
             string[] arr = new string[5];
+            var regex = new Regex("([:-@])|([!-/])|([[-`])|([{-~])");
+            int help = 0;
 
             if (s.Length < 8)
             {
                 arr[0] = "too short,";
 
             }
-            else { arr[0] = ""; }
+            else { arr[0] = "";help += 1; }
+            
             if (s.Any(char.IsUpper) == false)
             {
                 arr[1] = " dosen't have a uppercase letter,";
             }
-            else { arr[1] = ""; }
+            else { arr[1] = ""; help += 1; }
             if (s.Any(char.IsLower) == false)
             {
                 arr[2] = " dosen't have a lowercase letter,";
             }
-            else { arr[2] = ""; }
+            else { arr[2] = ""; help += 1; }
             if (s.Any(char.IsDigit) == false)
             {
                 arr[3] = " dosen't have a number,";
@@ -161,15 +166,20 @@ namespace Password_generator
             else
             {
                 arr[3] = "";
+                help += 1;
             }
-            if (s.Any(char.IsSymbol) == false)
+            if (regex.IsMatch(s)==false)
             {
                 arr[4] = " dosen't have a symbol";
             }
-            else { arr[4] = ""; }
+            else { arr[4] = ""; help += 1; }
 
             string d= String.Join("", arr);
-            
+
+            if (help == 5)
+            {
+                d = "Your password is safe";
+            }
             return d;
         }
         }
