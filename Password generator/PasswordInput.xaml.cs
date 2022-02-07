@@ -24,6 +24,15 @@ namespace Password_generator
         {
             InitializeComponent();
             DataContext = ps;
+            
+        }
+
+        private void input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            tx.Text=ps.PassInput(input.Text);
+
+
+
         }
     }
 }

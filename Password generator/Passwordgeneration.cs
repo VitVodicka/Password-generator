@@ -134,7 +134,44 @@ namespace Password_generator
             input = string.Join("", pole);
             Change("input");
         }
+        public string PassInput(string s)
+        {
+            string[] arr = new string[5];
+
+            if (s.Length < 8)
+            {
+                arr[0] = "too short,";
+
+            }
+            else { arr[0] = ""; }
+            if (s.Any(char.IsUpper) == false)
+            {
+                arr[1] = " dosen't have a uppercase letter,";
+            }
+            else { arr[1] = ""; }
+            if (s.Any(char.IsLower) == false)
+            {
+                arr[2] = " dosen't have a lowercase letter,";
+            }
+            else { arr[2] = ""; }
+            if (s.Any(char.IsDigit) == false)
+            {
+                arr[3] = " dosen't have a number,";
+            }
+            else
+            {
+                arr[3] = "";
+            }
+            if (s.Any(char.IsSymbol) == false)
+            {
+                arr[4] = " dosen't have a symbol";
+            }
+            else { arr[4] = ""; }
+
+            string d= String.Join("", arr);
             
+            return d;
+        }
         }
         
         
