@@ -35,7 +35,7 @@ namespace Password_generator
         {
             #region init
             Random r = new Random();
-            string[] pole = new string[12];
+            string[] PasswordArray = new string[12];
             List<int> position = new List<int>(new int[12]);
             char BigLetter;
             int Position;
@@ -55,7 +55,7 @@ namespace Password_generator
                     if (position.Contains(Position) == false)
                     {
                         position.Add(Position);
-                        pole[Position] = BigLetter.ToString();
+                        PasswordArray[Position] = BigLetter.ToString();
                         k = false;
                     }
 
@@ -78,7 +78,7 @@ namespace Password_generator
                     if (position.Contains(Position) == false)
                     {
                         position.Add(Position);
-                        pole[Position] = SmallLetter.ToString();
+                        PasswordArray[Position] = SmallLetter.ToString();
                         k = false;
                     }
 
@@ -100,7 +100,7 @@ namespace Password_generator
                     if (position.Contains(Position) == false)
                     {
                         position.Add(Position);
-                        pole[Position] = character.ToString();
+                        PasswordArray[Position] = character.ToString();
 
                         k = false;
                     }
@@ -122,7 +122,7 @@ namespace Password_generator
                     if ((position.Contains(Position) == false))
                     {
                         position.Add(Position);
-                        pole[Position] = number.ToString();
+                        PasswordArray[Position] = number.ToString();
                         k = false;
                     }
 
@@ -132,7 +132,7 @@ namespace Password_generator
 
             }
             #endregion
-            input = string.Join("", pole);
+            input = string.Join("", PasswordArray);
             Change("input");
         }
         public string PassInput(string s)

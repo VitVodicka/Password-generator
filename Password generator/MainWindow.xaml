@@ -6,7 +6,7 @@
         Icon="pictures/icon/icon.png"
         xmlns:local="clr-namespace:Password_generator"
         mc:Ignorable="d"
-        Title="Password Generator" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Password Generator" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid >
         
 
